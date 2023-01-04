@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/Health-care-App/static/css/main.1d6c9b4a.chunk.css",
+    "main.js": "/Health-care-App/static/js/main.66d9705d.chunk.js",
+    "main.js.map": "/Health-care-App/static/js/main.66d9705d.chunk.js.map",
+    "runtime-main.js": "/Health-care-App/static/js/runtime-main.dea39747.js",
+    "runtime-main.js.map": "/Health-care-App/static/js/runtime-main.dea39747.js.map",
+    "static/css/2.2ae1d27d.chunk.css": "/Health-care-App/static/css/2.2ae1d27d.chunk.css",
+    "static/js/2.12aee0d2.chunk.js": "/Health-care-App/static/js/2.12aee0d2.chunk.js",
+    "static/js/2.12aee0d2.chunk.js.map": "/Health-care-App/static/js/2.12aee0d2.chunk.js.map",
+    "index.html": "/Health-care-App/index.html",
+    "static/css/2.2ae1d27d.chunk.css.map": "/Health-care-App/static/css/2.2ae1d27d.chunk.css.map",
+    "static/css/main.1d6c9b4a.chunk.css.map": "/Health-care-App/static/css/main.1d6c9b4a.chunk.css.map",
+    "static/js/2.12aee0d2.chunk.js.LICENSE.txt": "/Health-care-App/static/js/2.12aee0d2.chunk.js.LICENSE.txt",
+    "static/media/Heartcheckup.959c892f.png": "/Health-care-App/static/media/Heartcheckup.959c892f.png",
+    "static/media/StarIcon.000aae00.png": "/Health-care-App/static/media/StarIcon.000aae00.png",
+    "static/media/award-1.1ffaa875.jpg": "/Health-care-App/static/media/award-1.1ffaa875.jpg",
+    "static/media/award-3.5aaf014f.jpg": "/Health-care-App/static/media/award-3.5aaf014f.jpg",
+    "static/media/award-4.1530fdec.jpg": "/Health-care-App/static/media/award-4.1530fdec.jpg",
+    "static/media/braintumor.5183968d.png": "/Health-care-App/static/media/braintumor.5183968d.png",
+    "static/media/diabetes.72ba6f19.png": "/Health-care-App/static/media/diabetes.72ba6f19.png",
+    "static/media/doctor.a32e6703.png": "/Health-care-App/static/media/doctor.a32e6703.png",
+    "static/media/fit.e309da88.png": "/Health-care-App/static/media/fit.e309da88.png",
+    "static/media/logo.c1db9e31.png": "/Health-care-App/static/media/logo.c1db9e31.png",
+    "static/media/multiplediseases.f635f930.png": "/Health-care-App/static/media/multiplediseases.f635f930.png",
+    "static/media/sick.ef65b39b.png": "/Health-care-App/static/media/sick.ef65b39b.png",
+    "static/media/signup.a451835a.png": "/Health-care-App/static/media/signup.a451835a.png",
+    "static/media/yoga-brain.6390ef1a.png": "/Health-care-App/static/media/yoga-brain.6390ef1a.png",
+    "static/media/yoga-heart.f6e4917c.png": "/Health-care-App/static/media/yoga-heart.f6e4917c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dea39747.js",
+    "static/css/2.2ae1d27d.chunk.css",
+    "static/js/2.12aee0d2.chunk.js",
+    "static/css/main.1d6c9b4a.chunk.css",
+    "static/js/main.66d9705d.chunk.js"
+  ]
+}
