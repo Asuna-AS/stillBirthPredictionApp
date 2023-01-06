@@ -5,7 +5,7 @@ import TextField from '../components/Form/TextField';
 import sick from "../sick.png"
 const CheckupScreen = () => {
     return (
-        <section className="mx-auto pl-60 pr-20 pt-24 overflow-y-hidden flex-wrap">
+        <section className="max-w-screen-xl py-24 mx-auto px-6  overflow-y-hidden">
             {/* heading  */}
             <div className="flex flex-col items-center space-x-2 pb-4 px-28">
                 <Bounce left><h1 className="text-white poppins text-3xl">Check {" "} <span className="text-red-200 font-semibold select-none">Up</span></h1>

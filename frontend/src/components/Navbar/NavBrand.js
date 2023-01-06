@@ -3,7 +3,7 @@ import logo from '../../logo.png'
 const NavBrand = () => {
     return (
         <div className="flex items-center">
-            <img className=" z-50" src={logo}/>
+            <img className="w-28" src={logo}/>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import ContactForm from '../components/Contact/ContactForm';
 
 const ContactScreen = () => {
     return (
-        <section className="max-w-screen-xl pt-24 mx-auto px-6  overflow-y-hidden">
+        <section className="max-w-screen-xl py-24 mx-auto px-6  overflow-y-hidden">
             {/* heading  */}
             <Bounce left>
                 <div className="flex flex-col items-center space-x-2 pb-4">

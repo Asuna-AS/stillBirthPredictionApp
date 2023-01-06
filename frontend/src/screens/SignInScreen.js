@@ -38,7 +38,7 @@ const SignInScreen = () => {
     ]
 
     return (
-        <main className="pl-60 m-auto px-10 z-50">
+        <main className="pl-60 m-auto px-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 {/* image  */}
                 <Bounce left>

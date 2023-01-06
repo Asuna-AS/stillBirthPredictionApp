@@ -8,20 +8,20 @@ const Banner = () => {
     const history = useHistory();
 
     return (
-        <section className="m-auto pl-72 pr-20 z-50">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 pt-20">
+        <section className="max-w-screen-xl py-12 mx-auto px-32">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 py-12">
                     <Fade left>
                         <div className="order-1 lg:order-1 flex flex-col justify-center h-full space-y-6">
 
-                            <div className="flex flex-col flex-wrap space-y-2">
+                            <div className="flex flex-col space-y-2">
                                 {/* <img className="w-24" src="../../../assets/banner/medal.png" alt="banner" /> */}
-                                <h1 className="poppins text-gray-700 font-semibold text-3xl lg:text-3xl leading-relaxed"><span className="text-5xl text-white">Life's biggest miracle is the gift of life growing inside you.</span></h1>
+                                <h1 className="poppins text-gray-700 font-semibold text-3xl lg:text-3xl leading-relaxed"><span className="text-5xl poppins text-black">Life's biggest miracle is the gift of life growing inside you.</span></h1>
                                 <p className="text-black text-light text-xl"></p>
                             </div>
             
                             {/* button  */}
                             <div className="flex flex-row flex-wrap gap-5 ">
-                                <button className="bg-white text-green-300 rounded-lg hover:bg-transparent py-3 px-4 hover:bg-green-300 hover:text-white poppins w-48 mt-6" onClick={() => history.push('/checkup')}>Get Started <span className='text-lg' aria-hidden="true">&rarr;</span></button> 
+                                <button className="bg-white text-black rounded-lg hover:bg-transparent py-3 px-4 hover:bg-black hover:text-white poppins w-48 mt-6" onClick={() => history.push('/checkup')}>Get Started <span className='text-lg' aria-hidden="true">&rarr;</span></button> 
                                 <button className="border-white border-4 rounded-lg bg-transparent py-3 px-4 text-white poppins w-48 mt-6 hover:bg-white hover:text-black shadow-lg" text="Reach us" onClick={() => history.push('/contact')}>Reach Us</button>
                             </div>
 

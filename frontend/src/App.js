@@ -18,12 +18,15 @@ import SignUpScreen from './screens/SignUpScreen';
 import HospitalScreen from './screens/HospitalScreen';
 import CheckupScreen from './screens/CheckupScreen';
 import Particle from './Particle.jsx';
+import background from "./background.png"
+import './styles/app.css'
 const App = () => {
   return (
     <HashRouter>
       <AuthProvider>
         <OrderProvider>
-          <Particle/>
+          {/* <Particle/> */}
+          <div class="background">
           <Navbar />
           <Switch>
             <Route exact path="/"><HomeScreen /></Route>
@@ -39,6 +42,7 @@ const App = () => {
             <Route path="*"><ErrorScreen /></Route>
           </Switch>
           <Footer />
+          </div>
         </OrderProvider>
       </AuthProvider>
     </HashRouter>
