@@ -25,8 +25,8 @@ const AuthorizeUserMobile = () => {
                 ) : (
                     <>
                         <div className="flex flex-row items-center justify-center space-x-6">
-                            <button className="poppins" onClick={() => history.push('/signin')}>Sign In</button>
-                            <button className=" btn-primary px-6 py-3  rounded-full" onClick={() => history.push('/signup')}>Sign Up</button>
+                            <button className="text-black text-sm border-2 p-3 rounded-xl poppins hover:text-white hover:bg-black hover:border-black" onClick={() => history.push('/signin')}>Sign In</button>
+                            <button className="text-sm text-white bg-black p-4 poppins rounded-xl hover:bg-white hover:text-black" onClick={() => history.push('/signup')}>Sign Up</button>
                         </div>
                     </>
                 )

@@ -6,7 +6,9 @@ import Testimonials from '../components/Testimonial/Testimonials'
 
 const HomeScreen = () => {
     return (
-            <Banner/>
+            <>
+            <Banner />
+            </>
     )
 }
 

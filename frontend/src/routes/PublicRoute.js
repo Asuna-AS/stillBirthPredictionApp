@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import GridLoader from "react-spinners/GridLoader";
+import PropagateLoader  from "react-spinners/RotateLoader";
 import useAuth from '../hooks/useAuth';
 
 const override = css`
@@ -15,7 +15,7 @@ const PublicRoute = ({ children, ...rest }) => {
     if (isLoading) {
         return (
             <div className="flex flex-col items-center justify-center h-screen">
-                <GridLoader color="#1d4ed8" css={override} size={25} />
+                <PropagateLoader  color="#fa497e" css={override} size={25} />
 
             </div>
         )

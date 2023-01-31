@@ -20,18 +20,19 @@ import CheckupScreen from './screens/CheckupScreen';
 import Particle from './Particle.jsx';
 import background from "./background.png"
 import './styles/app.css'
+import Loading from './components/loading/loading.jsx'
 const App = () => {
   return (
     <HashRouter>
       <AuthProvider>
         <OrderProvider>
-          {/* <Particle/> */}
-          <div class="background">
+          <Particle/>
           <Navbar />
+          {/* <Loading/> */}
           <Switch>
             <Route exact path="/"><HomeScreen /></Route>
             <Route exact path="/contact"><ContactScreen /></Route>
-            <Route exact path='/checkup'><CheckupScreen/></Route>
+            <Route exact path='/checkup'><CheckupScreen /></Route>
             <PublicRoute path="/signup"><SignUpScreen /></PublicRoute>
             <PublicRoute path="/signin"><SignInScreen /></PublicRoute>
             <PrivateRoute exact path="/services/:title"><ServicesDetailScreen /></PrivateRoute>
@@ -42,7 +43,6 @@ const App = () => {
             <Route path="*"><ErrorScreen /></Route>
           </Switch>
           <Footer />
-          </div>
         </OrderProvider>
       </AuthProvider>
     </HashRouter>
