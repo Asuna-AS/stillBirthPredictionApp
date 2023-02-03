@@ -8,23 +8,22 @@ app = Flask(__name__)
 CORS(app, support_credentials=True)
 model = pickle.load(open('model.pkl','rb'))
 
-print(model.predict([[0,1,0,1,1,1,1,1,1,1,1,1,1,1]]))
-# finalData = ""
-
-
+# print(model.predict([[]]))
 @app.route('/api',methods=['POST'])
 @cross_origin(supports_credentials=True)
 def predict():
     data = request.get_json(force=True)
-    # finalData = data
-    # y = json.loads(finalData)
-    # print(y["age"])
-    # res = model.predict(data.age, data.placentalAbs, data.prevSb, data.depression, data.obesity, data.drugIntake, data.chrAbr, data.diabetes, data.kidney, data.thyroid, data.married, data.blackrace, data.financial, data.sleep)
-    # print(res)
-    # response.headers.add('Access-Control-Allow-Origin', '*')
-    response = jsonify({"A":1})
+    print(data)
+    int_features = [int(x) for x in data.values()]
+    final_features = np.array(int_features)
+    res = model.predict([final_features])
+    riski = model.predict_proba([final_features])[0]
+    print(final_features)
+    ans = round(riski[1]*100, 2)
+    print(ans)
+    r = {"result" : float(ans) }
+    response = jsonify(r)
     return response
-    # return jsonify(output)
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)

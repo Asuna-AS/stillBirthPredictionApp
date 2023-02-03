@@ -31,7 +31,7 @@ const Navbar = () => {
     window.addEventListener('scroll', onChangeHeader)
 
     return (
-        <header className={changeHeader ? "bg-gray-700 fixed z-50 top-0 left-0 w-full transition duration-500" : "bg-gray-700 fixed z-50 top-0 left-0 w-full transition duration-500"}>
+        <header className={changeHeader ? " bg-indigo-500 fixed z-50 top-0 left-0 w-full transition duration-500" : "bg-transparent fixed z-50 top-0 left-0 w-full transition duration-500"}>
             {/* desktop nav  */}
             <nav className="flex justify-between items-center max-w-screen-xl mx-auto px-12 py-6">
                 <div className="hidden md:flex pl-24 lg:flex">
@@ -42,7 +42,7 @@ const Navbar = () => {
                         {menu.map(item => (
                             <div className='flex'>
                             <li key={item.id}>
-                                <NavLink exact to={item.to} className="text-white text-lg poppins" activeClassName="flex border-b-2 border-white">{item.text}</NavLink>
+                                <NavLink exact to={item.to} className="text-white text-md poppins" activeClassName="flex border-b-2 border-white">{item.text}</NavLink>
                             </li>
                             </div>
                         ))}

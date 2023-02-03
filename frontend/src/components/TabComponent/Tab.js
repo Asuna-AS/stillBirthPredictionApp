@@ -16,17 +16,18 @@ function ControlledTabsExample() {
     const [blackrace, setblackrace] = useState();
     const [financial, setfinancial] = useState();
     const [sleep, setsleep] = useState();
-
+    const [result, setResult] = useState();
     function handleForm(event)
     {
         event.preventDefault();
         console.log(age, placentalAbs, prevSb, depression, obesity, drugIntake, chrAbr, diabetes, kidney, thyroid, married, blackrace, financial, sleep)
         if(age && placentalAbs && prevSb && depression && obesity && drugIntake && chrAbr && diabetes && kidney && thyroid && married && blackrace && financial && sleep)
         {
-            let formData = {"age" : age, "placentalAbs": placentalAbs, "prevSb": prevSb, "depression": depression, "obesity":obesity, "drugIntake" : drugIntake, "chrAbr": chrAbr, "diabetes": diabetes, "kidney": kidney, "thyroid": thyroid, "married": married, "blackrace": blackrace, "financial": financial, "sleep":sleep}
+            let formData = {"placentalAbs": placentalAbs, "prevSb": prevSb, "depression": depression, "obesity":obesity, "drugIntake" : drugIntake, "age" : age, "chrAbr": chrAbr, "kidney": kidney, "diabetes": diabetes, "thyroid": thyroid, "married": married, "blackrace": blackrace, "financial": financial, "sleep":sleep}
             console.log(formData)
             axios.post("http://localhost:5000/api", formData).then((response)=>{
-                console.log(response);
+                console.log(response.data.result);
+                setResult(response.data.result);
             }).catch((error)=>{
                 console.log(error);
             })
@@ -343,6 +344,9 @@ function ControlledTabsExample() {
                                 <button type='button' onClick={(event) => {handleForm(event)}} className='bg-gray-700 p-2 rounded-xl text-white'>Submit</button>
                             </div>
                         </form>
+                        <div>
+                            {(result <=40) ? "Low chances of stillBirth" : (result<=70 && result >= 40) ? "StillBirth can occur" : "Risk is high consult nearby hospital" }
+                        </div>
                     </div>
                 </div>
             }
