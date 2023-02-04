@@ -24,6 +24,7 @@ def predict():
     r = {"result" : float(ans) }
     response = jsonify(r)
     return response
-
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
+
+def concat():
