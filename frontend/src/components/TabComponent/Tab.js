@@ -23,13 +23,22 @@ function ControlledTabsExample() {
     const [gestationAge,setgestationAge] = useState();
     const [plcentalWeight,setplcentalWeight] = useState();
     const [fetusWeight,setfetusWeight] = useState();
+    const [bloodClotting,setbloodClotting] = useState();
+    const [bloodPressure,setbloodPressure] = useState();
+    const [renalDisease,setrenalDisease] = useState();
+    const [lateTermPregnancy,setlateTermPregnancy] = useState();
+    const [oligohydramnios,setoligohydramnios] = useState();
+    const [umbilicalCord,setumbilicalCord] = useState();
+    const [groupBInfection,setgroupBInfection] = useState();
+    const [waterBreak,setwaterBreak] = useState();
+    
     function handleMaternalForm(event)
     {
         event.preventDefault();
-            console.log(age, placentalAbs, prevSb, depression, obesity, drugIntake, chrAbr, diabetes, kidney, thyroid, married, blackrace, financial, sleep)
-        if(age && placentalAbs && prevSb && depression && obesity && drugIntake && chrAbr && diabetes && kidney && thyroid && married && blackrace && financial && sleep && multipleGestation && fetalMovement && fetalHeartbeat && gestationAge && plcentalWeight && fetusWeight)
+        console.log(bloodClotting, bloodPressure, renalDisease, lateTermPregnancy, oligohydramnios, umbilicalCord, groupBInfection, waterBreak)
+        if(bloodClotting && bloodPressure && renalDisease && lateTermPregnancy && oligohydramnios && umbilicalCord && groupBInfection && waterBreak)
         {
-            let formData = {"placentalAbs": placentalAbs, "prevSb": prevSb, "depression": depression, "obesity":obesity, "drugIntake" : drugIntake, "age" : age, "chrAbr": chrAbr, "kidney": kidney, "diabetes": diabetes, "thyroid": thyroid, "married": married, "blackrace": blackrace, "financial": financial, "sleep":sleep}
+            let formData = {"bloodClotting": bloodClotting, "bloodPressure": bloodPressure, "renalDisease": renalDisease, "lateTermPregnancy":lateTermPregnancy, "oligohydramnios" : oligohydramnios, "umbilicalCord" : umbilicalCord, "groupBInfection": groupBInfection, "waterBreak": waterBreak,}
             console.log(formData)
             axios.post("http://localhost:5000/api", formData).then((response)=>{
                 console.log(response.data.result);
@@ -104,11 +113,11 @@ function ControlledTabsExample() {
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>Yes</p>
-                                    <input required type="radio" id="yes" name="bloodClotting" value="1"></input>
+                                    <input required type="radio" onClick={(e)=>{setbloodClotting(e.target.value)}} id="yes" name="bloodClotting" value="1"></input>
                                 </label>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>No</p>
-                                    <input required type="radio" id="no" name="bloodClotting" value="0"></input>
+                                    <input required type="radio" onClick={(e)=>{setbloodClotting(e.target.value)}} id="no" name="bloodClotting" value="0"></input>
                                 </label>
                             </div>
                         </div>
@@ -117,11 +126,11 @@ function ControlledTabsExample() {
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>Yes</p>
-                                    <input required type="radio" id="yes" name="bloodPressure" value="1"></input>
+                                    <input required type="radio" onClick={(e)=>{setbloodPressure(e.target.value)}} id="yes" name="bloodPressure" value="1"></input>
                                 </label>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>No</p>
-                                    <input required type="radio" id="no" name="bloodPressure" value="0"></input>
+                                    <input required type="radio" onClick={(e)=>{setbloodPressure(e.target.value)}} id="no" name="bloodPressure" value="0"></input>
                                 </label>
                             </div>
                         </div>
@@ -130,11 +139,11 @@ function ControlledTabsExample() {
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>Yes</p>
-                                    <input required type="radio" id="yes" name="renalDisease" value="1"></input>
+                                    <input required type="radio" onClick={(e)=>{setrenalDisease(e.target.value)}} id="yes" name="renalDisease" value="1"></input>
                                 </label>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>No</p>
-                                    <input required type="radio" id="no" name="renalDisease" value="0"></input>
+                                    <input required type="radio" onClick={(e)=>{setrenalDisease(e.target.value)}} id="no" name="renalDisease" value="0"></input>
                                 </label>
                             </div>
                         </div>
@@ -143,11 +152,11 @@ function ControlledTabsExample() {
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>Yes</p>
-                                    <input required type="radio" id="yes" name="lateTermPregnancy" value="1"></input>
+                                    <input required type="radio" onClick={(e)=>{setlateTermPregnancy(e.target.value)}} id="yes" name="lateTermPregnancy" value="1"></input>
                                 </label>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>No</p>
-                                    <input required type="radio" id="no" name="lateTermPregnancy" value="0"></input>
+                                    <input required type="radio" onClick={(e)=>{setlateTermPregnancy(e.target.value)}} id="no" name="lateTermPregnancy" value="0"></input>
                                 </label>
                             </div>
                         </div>
@@ -156,11 +165,11 @@ function ControlledTabsExample() {
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>Yes</p>
-                                    <input required type="radio" id="yes" name="oligohydramnios" value="1"></input>
+                                    <input required type="radio" onClick={(e)=>{setoligohydramnios(e.target.value)}} id="yes" name="oligohydramnios" value="1"></input>
                                 </label>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>No</p>
-                                    <input required type="radio" id="no" name="oligohydramnios" value="0"></input>
+                                    <input required type="radio" onClick={(e)=>{setoligohydramnios(e.target.value)}} id="no" name="oligohydramnios" value="0"></input>
                                 </label>
                             </div>
                         </div>
@@ -169,11 +178,11 @@ function ControlledTabsExample() {
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>Yes</p>
-                                    <input required type="radio" id="yes" name="umbilicalCordIssue" value="1"></input>
+                                    <input required type="radio" onClick={(e)=>{setumbilicalCord(e.target.value)}} id="yes" name="umbilicalCordIssue" value="1"></input>
                                 </label>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>No</p>
-                                    <input required type="radio" id="no" name="umbilicalCordIssue" value="0"></input>
+                                    <input required type="radio" onClick={(e)=>{setumbilicalCord(e.target.value)}} id="no" name="umbilicalCordIssue" value="0"></input>
                                 </label>
                             </div>
                         </div>
@@ -182,11 +191,11 @@ function ControlledTabsExample() {
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>Yes</p>
-                                    <input required type="radio" id="yes" name="groupBInfection" value="1"></input>
+                                    <input required type="radio" onClick={(e)=>{setgroupBInfection(e.target.value)}} id="yes" name="groupBInfection" value="1"></input>
                                 </label>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>No</p>
-                                    <input required type="radio" id="no" name="groupBInfection" value="0"></input>
+                                    <input required type="radio" onClick={(e)=>{setgroupBInfection(e.target.value)}} id="no" name="groupBInfection" value="0"></input>
                                 </label>
                             </div>
                         </div>
@@ -195,13 +204,16 @@ function ControlledTabsExample() {
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>Yes</p>
-                                    <input required type="radio" id="yes" name="waterBreak" value="1"></input>
+                                    <input required type="radio" onClick={(e)=>{setwaterBreak(e.target.value)}} id="yes" name="waterBreak" value="1"></input>
                                 </label>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>No</p>
-                                    <input required type="radio" id="no" name="waterBreak" value="0"></input>
+                                    <input required type="radio" onClick={(e)=>{setwaterBreak(e.target.value)}} id="no" name="waterBreak" value="0"></input>
                                 </label>
                             </div>
+                        </div>
+                        <div className='flex justify-center pt-2'>
+                            <button type='button' onClick={(event) => {handleMaternalForm(event)}} className='bg-gray-700 p-2 rounded-xl text-white'>Submit</button>
                         </div>
                     </div>
                 </div>
@@ -391,7 +403,7 @@ function ControlledTabsExample() {
                                 </div>
                             </div>
                             <div className='flex justify-center pt-2'>
-                                <button type='button' onClick={(event) => {handleForm(event)}} className='bg-gray-700 p-2 rounded-xl text-white'>Submit</button>
+                                <button type='button' onClick={(event) => {handlePlacentalForm(event)}} className='bg-gray-700 p-2 rounded-xl text-white'>Submit</button>
                             </div>
                         </form>
                         <div>
@@ -456,6 +468,9 @@ function ControlledTabsExample() {
                                     <input required type="number" placeholder="in grams" id="fetusWeight" name="fetusWeight" className='border-b bg-transparent border-black w-32 text-center'></input>
                                 </label>
                             </div>
+                        </div>
+                        <div className='flex justify-center pt-2'>
+                            <button type='button' onClick={(event) => {handleFetalForm(event)}} className='bg-gray-700 p-2 rounded-xl text-white'>Submit</button>
                         </div>
                     </div>
                 </div>
