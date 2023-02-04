@@ -105,7 +105,7 @@ function ControlledTabsExample() {
                 <button className="border border-black hover:border-gray-200 p-3 m-4 hover:bg-gray-200 rounded font-semibold text-black " onClick={e => { setTab("tab3") }}>Fetal Factors</button>
             </div>
             {tab == "tab1" &&
-                <div className='bg-white rounded-xl transition-all duration-300 w-4/5 p-4 px-6'>
+                <div className='bg-white rounded-xl transition-all duration-300 p-4 px-6'>
                     <h1 className='text-lg font-semibold flex flex-row justify-center pb-4'>Prediction on the basis of Placental factors</h1>
                     <div className='flex flex-col bg-indigo-200 gap-3 rounded-2xl px-3 py-4'>
                         <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
@@ -219,7 +219,7 @@ function ControlledTabsExample() {
                 </div>
             }
             {tab == "tab2" &&
-                <div className='bg-white rounded-xl transition-all duration-300 w-4/5 p-4 px-6'>
+                <div className='bg-white rounded-xl transition-all duration-300 p-4 px-6'>
                     <h1 className='text-lg font-semibold flex flex-row justify-center pb-4'>Prediction on the basis of Maternal factors</h1>
                     <div className='flex flex-col gap-3 items-center bg-indigo-200 rounded-2xl py-4'>
                         <form className='flex flex-col w-full px-12'>
@@ -413,7 +413,7 @@ function ControlledTabsExample() {
                 </div>
             }
             {tab == "tab3" &&
-                <div className='bg-white rounded-xl transition-all duration-300 w-4/5 p-4 px-6'>
+                <div className='bg-white rounded-xl transition-all duration-300 p-4 px-6'>
                     <h1 className='text-lg font-semibold flex flex-row justify-center pb-4'>Prediction on the basis of Fetal Factors</h1>
                     <div className='flex flex-col gap-3 items-center bg-indigo-200 px-3 rounded-2xl py-4'>
                         <div className="flex flex-row w-full flex-wrap gap-4 justify-between px-8 hover:shadow-xl hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
