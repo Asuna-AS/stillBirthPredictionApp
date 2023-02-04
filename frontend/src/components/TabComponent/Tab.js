@@ -17,7 +17,34 @@ function ControlledTabsExample() {
     const [financial, setfinancial] = useState();
     const [sleep, setsleep] = useState();
     const [result, setResult] = useState();
-    function handleForm(event)
+    const [multipleGestation, setMultipleGestation] = useState();
+    const [fetalMovement, setFetalMovement] = useState();
+    const [fetalHeartbeat, setFetalHeartbeat] = useState();
+    const [gestationAge,setgestationAge] = useState();
+    const [plcentalWeight,setplcentalWeight] = useState();
+    const [fetusWeight,setfetusWeight] = useState();
+    function handleMaternalForm(event)
+    {
+        event.preventDefault();
+            console.log(age, placentalAbs, prevSb, depression, obesity, drugIntake, chrAbr, diabetes, kidney, thyroid, married, blackrace, financial, sleep)
+        if(age && placentalAbs && prevSb && depression && obesity && drugIntake && chrAbr && diabetes && kidney && thyroid && married && blackrace && financial && sleep && multipleGestation && fetalMovement && fetalHeartbeat && gestationAge && plcentalWeight && fetusWeight)
+        {
+            let formData = {"placentalAbs": placentalAbs, "prevSb": prevSb, "depression": depression, "obesity":obesity, "drugIntake" : drugIntake, "age" : age, "chrAbr": chrAbr, "kidney": kidney, "diabetes": diabetes, "thyroid": thyroid, "married": married, "blackrace": blackrace, "financial": financial, "sleep":sleep}
+            console.log(formData)
+            axios.post("http://localhost:5000/api", formData).then((response)=>{
+                console.log(response.data.result);
+                setResult(response.data.result);
+            }).catch((error)=>{
+                console.log(error);
+            })
+        }
+        else
+        {
+            console.log("Empty form")
+        }
+    }
+
+    function handlePlacentalForm(event)
     {
         event.preventDefault();
         console.log(age, placentalAbs, prevSb, depression, obesity, drugIntake, chrAbr, diabetes, kidney, thyroid, married, blackrace, financial, sleep)
@@ -38,12 +65,35 @@ function ControlledTabsExample() {
         }
     }
 
+    function handleFetalForm(event)
+    {
+        event.preventDefault();
+        console.log(age, placentalAbs, prevSb, depression, obesity, drugIntake, chrAbr, diabetes, kidney, thyroid, married, blackrace, financial, sleep)
+        if(multipleGestation && fetalMovement && fetalHeartbeat && gestationAge && plcentalWeight && fetusWeight)
+        {
+            let formData = {"placentalAbs": placentalAbs, "prevSb": prevSb, "depression": depression, "obesity":obesity, "drugIntake" : drugIntake, "age" : age, "chrAbr": chrAbr, "kidney": kidney, "diabetes": diabetes, "thyroid": thyroid, "married": married, "blackrace": blackrace, "financial": financial, "sleep":sleep, "multipleGestation" : multipleGestation, "fetalMovement" : fetalMovement, "fetalHeartbeat": fetalHeartbeat,"gestationAge" : gestationAge, "plcentalWeight" : plcentalWeight,"fetusWeight" : fetusWeight  }
+            console.log(formData)
+            axios.post("http://localhost:5000/api", formData).then((response)=>{
+                console.log(response.data.result);
+                setResult(response.data.result);
+            }).catch((error)=>{
+                console.log(error);
+            })
+        }
+        else
+        {
+            console.log("Empty form")
+        }
+    }
+
     return (
-        <div className='flex flex-row justify-center'>
-            <div className='flex flex-col py-20 w-2/5'>
-                <span className={(tab == "tab1") ? 'cursor-pointer flex font-semibold px-8 rounded-l-3xl bg-white text-black p-3 transition-all duration-300' : 'text-white transition-all duration-300 cursor-pointer px-8 flex p-3'} onClick={(e) => { setTab("tab1") }}>Maternal Factors</span>
-                <span className={(tab == "tab2") ? 'cursor-pointer flex font-semibold px-8 rounded-l-3xl bg-white text-black p-3 transition-all duration-300' : 'text-white transition-all duration-300 cursor-pointer px-8 flex p-3'} onClick={(e) => { setTab("tab2") }}>Placental Factors</span>
-                <span className={(tab == "tab3") ? 'cursor-pointer flex font-semibold px-8 rounded-l-3xl bg-white text-black p-3 transition-all duration-300' : 'text-white transition-all duration-300 cursor-pointer px-8 flex p-3'} onClick={(e) => { setTab("tab3") }}>Fetal Factors</span>
+
+        <div className="flex flex-col items-center space-x-2 pb-4 px-28">
+            <form className="bg-white mt-6 p-6 rounded-lg shadow-lg shadow-cyan-500/50">
+            <div>
+                <button className="border border-black hover:border-gray-200 p-3 m-4 hover:bg-gray-200 rounded font-semibold text-black " onClick={e => { setTab("tab1") }}>Maternal Factors</button>
+                <button className="border border-black hover:border-gray-200 p-3 m-4 hover:bg-gray-200 rounded font-semibold text-black " onClick={e => { setTab("tab2") }}>Placental Factors</button>
+                <button className="border border-black hover:border-gray-200 p-3 m-4 hover:bg-gray-200 rounded font-semibold text-black " onClick={e => { setTab("tab3") }}>Fetal Factors</button>
             </div>
             {tab == "tab1" &&
                 <div className='bg-white rounded-xl transition-all duration-300 w-4/5 p-4 px-6'>
@@ -410,6 +460,8 @@ function ControlledTabsExample() {
                     </div>
                 </div>
             }
+
+            </form>
         </div>
     );
 }

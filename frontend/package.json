@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "homepage": "https://Asuna-AS.github.io/StillBirthPrediction",
   "private" : true,
-  "proxy" : "http://localhost:5000/",
   "dependencies": {
     "@craco/craco": "^6.3.0",
     "@material-tailwind/react": "^1.2.5",
