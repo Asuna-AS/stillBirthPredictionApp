@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from "axios";
 function ControlledTabsExample() {
+    const [fetalResult, setFetalResult] = useState();
+    const [maternalResult, setMaternalResult] = useState();
+    const [placentalResult, setPlacentalResult] = useState();
     const [tab, setTab] = useState('tab1');
     const [age, setAge] = useState();
     const [placentalAbs, setplacentalAbs] = useState();
@@ -16,7 +19,6 @@ function ControlledTabsExample() {
     const [blackrace, setblackrace] = useState();
     const [financial, setfinancial] = useState();
     const [sleep, setsleep] = useState();
-    const [result, setResult] = useState();
     const [multipleGestation, setMultipleGestation] = useState();
     const [fetalMovement, setFetalMovement] = useState();
     const [fetalHeartbeat, setFetalHeartbeat] = useState();
@@ -40,9 +42,9 @@ function ControlledTabsExample() {
         {
             let formData = {"bloodClotting": bloodClotting, "bloodPressure": bloodPressure, "renalDisease": renalDisease, "lateTermPregnancy":lateTermPregnancy, "oligohydramnios" : oligohydramnios, "umbilicalCord" : umbilicalCord, "groupBInfection": groupBInfection, "waterBreak": waterBreak,}
             console.log(formData)
-            axios.post("http://localhost:5000/api", formData).then((response)=>{
+            axios.post("http://localhost:5000/maternalApi", formData).then((response)=>{
                 console.log(response.data.result);
-                setResult(response.data.result);
+                setMaternalResult(response.data.result);
             }).catch((error)=>{
                 console.log(error);
             })
@@ -57,13 +59,13 @@ function ControlledTabsExample() {
     {
         event.preventDefault();
         console.log(age, placentalAbs, prevSb, depression, obesity, drugIntake, chrAbr, diabetes, kidney, thyroid, married, blackrace, financial, sleep)
-        if(age && placentalAbs && prevSb && depression && obesity && drugIntake && chrAbr && diabetes && kidney && thyroid && married && blackrace && financial && sleep)
+        if(multipleGestation && fetalMovement && fetalHeartbeat && gestationAge && plcentalWeight && fetusWeight)
         {
             let formData = {"placentalAbs": placentalAbs, "prevSb": prevSb, "depression": depression, "obesity":obesity, "drugIntake" : drugIntake, "age" : age, "chrAbr": chrAbr, "kidney": kidney, "diabetes": diabetes, "thyroid": thyroid, "married": married, "blackrace": blackrace, "financial": financial, "sleep":sleep}
             console.log(formData)
-            axios.post("http://localhost:5000/api", formData).then((response)=>{
+            axios.post("http://localhost:5000/placentalApi", formData).then((response)=>{
                 console.log(response.data.result);
-                setResult(response.data.result);
+                setPlacentalResult(response.data.result);
             }).catch((error)=>{
                 console.log(error);
             })
@@ -77,14 +79,14 @@ function ControlledTabsExample() {
     function handleFetalForm(event)
     {
         event.preventDefault();
-        console.log(age, placentalAbs, prevSb, depression, obesity, drugIntake, chrAbr, diabetes, kidney, thyroid, married, blackrace, financial, sleep)
+        console.log(multipleGestation, fetalMovement, fetalHeartbeat, gestationAge, plcentalWeight, fetusWeight)
         if(multipleGestation && fetalMovement && fetalHeartbeat && gestationAge && plcentalWeight && fetusWeight)
         {
-            let formData = {"placentalAbs": placentalAbs, "prevSb": prevSb, "depression": depression, "obesity":obesity, "drugIntake" : drugIntake, "age" : age, "chrAbr": chrAbr, "kidney": kidney, "diabetes": diabetes, "thyroid": thyroid, "married": married, "blackrace": blackrace, "financial": financial, "sleep":sleep, "multipleGestation" : multipleGestation, "fetalMovement" : fetalMovement, "fetalHeartbeat": fetalHeartbeat,"gestationAge" : gestationAge, "plcentalWeight" : plcentalWeight,"fetusWeight" : fetusWeight  }
+            let formData = {"multipleGestation" : multipleGestation, "fetalMovement" : fetalMovement, "fetalHeartbeat" : fetalHeartbeat, "gestationAge" : gestationAge, "plcentalWeight" : plcentalWeight, "fetusWeight" : fetusWeight}
             console.log(formData)
-            axios.post("http://localhost:5000/api", formData).then((response)=>{
+            axios.post("http://localhost:5000/fetalApi", formData).then((response)=>{
                 console.log(response.data.result);
-                setResult(response.data.result);
+                setFetalResult(response.data.result);
             }).catch((error)=>{
                 console.log(error);
             })
@@ -98,16 +100,17 @@ function ControlledTabsExample() {
     return (
 
         <div className="flex flex-col items-center space-x-2 pb-4 px-28">
-            <form className="bg-white mt-6 p-6 rounded-lg shadow-lg shadow-cyan-500/50">
-            <div>
-                <button className="border border-black hover:border-gray-200 p-3 m-4 hover:bg-gray-200 rounded font-semibold text-black " onClick={e => { setTab("tab1") }}>Maternal Factors</button>
-                <button className="border border-black hover:border-gray-200 p-3 m-4 hover:bg-gray-200 rounded font-semibold text-black " onClick={e => { setTab("tab2") }}>Placental Factors</button>
-                <button className="border border-black hover:border-gray-200 p-3 m-4 hover:bg-gray-200 rounded font-semibold text-black " onClick={e => { setTab("tab3") }}>Fetal Factors</button>
+            <div className="bg-white mt-6 p-6 w-full rounded-lg shadow-lg shadow-cyan-500/50">
+            <div className='flex justify-center'>
+                <button type='button' className="border border-black hover:border-gray-200 p-3 m-4 hover:bg-gray-200 rounded font-semibold text-black " onClick={e => { setTab("tab1") }}>Maternal Factors</button>
+                <button type='button' className="border border-black hover:border-gray-200 p-3 m-4 hover:bg-gray-200 rounded font-semibold text-black " onClick={e => { setTab("tab2") }}>Placental Factors</button>
+                <button type='button' className="border border-black hover:border-gray-200 p-3 m-4 hover:bg-gray-200 rounded font-semibold text-black " onClick={e => { setTab("tab3") }}>Fetal Factors</button>
             </div>
             {tab == "tab1" &&
+                <form method="post">
                 <div className='bg-white rounded-xl transition-all duration-300 p-4 px-6'>
-                    <h1 className='text-lg font-semibold flex flex-row justify-center pb-4'>Prediction on the basis of Placental factors</h1>
-                    <div className='flex flex-col bg-indigo-200 gap-3 rounded-2xl px-3 py-4'>
+                    <h1 className='text-lg font-semibold flex flex-row justify-center pb-4'>Prediction on the basis of Maternal factors</h1>
+                    <div className='flex flex-col items-center bg-indigo-200 gap-3 rounded-2xl px-3 py-4'>
                         <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                             Have a Blood Clotting Disorder?
                             <div className='flex flex-row gap-3 flex-wrap'>
@@ -213,16 +216,20 @@ function ControlledTabsExample() {
                             </div>
                         </div>
                         <div className='flex justify-center pt-2'>
-                            <button type='button' onClick={(event) => {handleMaternalForm(event)}} className='bg-gray-700 p-2 rounded-xl text-white'>Submit</button>
+                            <button type='submit' onClick={(event) => {handleMaternalForm(event)}} className='bg-gray-700 p-2 rounded-xl text-white'>Submit</button>
+                        </div>
+                        <div className='flex poppins'>
+                            {(maternalResult <=40) ? "Low chances of stillBirth" : (maternalResult<=70 && maternalResult > 40) ? "StillBirth can occur" : (maternalResult > 70) ? "Risk is high consult nearby hospital" : "" }
                         </div>
                     </div>
                 </div>
+                </form>
             }
             {tab == "tab2" &&
+                <form method="post">
                 <div className='bg-white rounded-xl transition-all duration-300 p-4 px-6'>
-                    <h1 className='text-lg font-semibold flex flex-row justify-center pb-4'>Prediction on the basis of Maternal factors</h1>
-                    <div className='flex flex-col gap-3 items-center bg-indigo-200 rounded-2xl py-4'>
-                        <form className='flex flex-col w-full px-12'>
+                    <h1 className='text-lg font-semibold flex flex-row justify-center pb-4'>Prediction on the basis of Placental factors</h1>
+                    <div className='flex flex-col gap-3 items-center bg-indigo-200 px-3 rounded-2xl py-4'>
                             <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                 Age
                                 <div className='flex flex-row gap-3 flex-wrap'>
@@ -234,7 +241,6 @@ function ControlledTabsExample() {
                             </div>
                             <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                 Have Placental Abruption?
-
                                 <div className='flex flex-row gap-3 flex-wrap'>
                                     <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                         <p className='pb-1'>Yes</p>
@@ -403,16 +409,17 @@ function ControlledTabsExample() {
                                 </div>
                             </div>
                             <div className='flex justify-center pt-2'>
-                                <button type='button' onClick={(event) => {handlePlacentalForm(event)}} className='bg-gray-700 p-2 rounded-xl text-white'>Submit</button>
+                                <button type='submit' onClick={(event) => {handlePlacentalForm(event)}} className='bg-gray-700 p-2 rounded-xl text-white'>Submit</button>
                             </div>
-                        </form>
-                        <div>
-                            {(result <=40) ? "Low chances of stillBirth" : (result<=70 && result >= 40) ? "StillBirth can occur" : "Risk is high consult nearby hospital" }
+                        <div className='flex poppins'>
+                            {(placentalResult <=40) ? "Low chances of stillBirth" : (placentalResult<=70 && placentalResult > 40) ? "StillBirth can occur" : (placentalResult > 70) ? "Risk is high consult nearby hospital" : "" }
                         </div>
                     </div>
                 </div>
+                </form>
             }
             {tab == "tab3" &&
+                <form method="post"> 
                 <div className='bg-white rounded-xl transition-all duration-300 p-4 px-6'>
                     <h1 className='text-lg font-semibold flex flex-row justify-center pb-4'>Prediction on the basis of Fetal Factors</h1>
                     <div className='flex flex-col gap-3 items-center bg-indigo-200 px-3 rounded-2xl py-4'>
@@ -421,11 +428,11 @@ function ControlledTabsExample() {
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>Twins</p>
-                                    <input required type="radio" id="2" name="multipleGestation" value="2"></input>
+                                    <input required type="radio" onChange={(e) => setMultipleGestation(e.target.value)} id="2" name="multipleGestation" value="2"></input>
                                 </label>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
                                     <p className='pb-1'>Triplets</p>
-                                    <input required type="radio" id="3" name="multipleGestation" value="3"></input>
+                                    <input required type="radio" onChange={(e) => setMultipleGestation(e.target.value)} id="3" name="multipleGestation" value="3"></input>
                                 </label>
                             </div>
                         </div>
@@ -433,7 +440,7 @@ function ControlledTabsExample() {
                             Fetal Movement
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
-                                    <input required type="number" placeholder="per hour" id="fetalMovement" name="fetalMovement" className='border-b bg-transparent border-black w-32 text-center'></input>
+                                    <input required type="number" onChange={(e) => setFetalMovement(e.target.value)} placeholder="per hour" id="fetalMovement" name="fetalMovement" className='border-b bg-transparent border-black w-32 text-center'></input>
                                 </label>
                             </div>
                         </div>
@@ -441,7 +448,7 @@ function ControlledTabsExample() {
                             Fetal Heartbeat
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
-                                    <input required type="number" placeholder="per min" id="fetalHeartbeat" name="fetalHeartbeat" className='border-b bg-transparent border-black w-32 text-center'></input>
+                                    <input required type="number" onChange={(e) => setFetalHeartbeat(e.target.value)} placeholder="per min" id="fetalHeartbeat" name="fetalHeartbeat" className='border-b bg-transparent border-black w-32 text-center'></input>
                                 </label>
                             </div>
                         </div>
@@ -449,7 +456,7 @@ function ControlledTabsExample() {
                             Gestation Age
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
-                                    <input required type="number" placeholder="in weeks" id="gestationAge" name="gestationAge" className='border-b bg-transparent border-black w-32 text-center'></input>
+                                    <input required type="number" onChange={(e) => setgestationAge(e.target.value)} placeholder="in weeks" id="gestationAge" name="gestationAge" className='border-b bg-transparent border-black w-32 text-center'></input>
                                 </label>
                             </div>
                         </div>
@@ -457,7 +464,7 @@ function ControlledTabsExample() {
                             Plcental Weight
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
-                                    <input required type="number" placeholder="in kg" id="plcentalWeight" name="plcentalWeight" className='border-b bg-transparent border-black w-32 text-center'></input>
+                                    <input required type="number" onChange={(e) => setplcentalWeight(e.target.value)} placeholder="in kg" id="plcentalWeight" name="plcentalWeight" className='border-b bg-transparent border-black w-32 text-center'></input>
                                 </label>
                             </div>
                         </div>
@@ -465,18 +472,22 @@ function ControlledTabsExample() {
                             Fetus Weight
                             <div className='flex flex-row gap-3 flex-wrap'>
                                 <label className='flex flex-row gap-4 m-auto flex-wrap'>
-                                    <input required type="number" placeholder="in grams" id="fetusWeight" name="fetusWeight" className='border-b bg-transparent border-black w-32 text-center'></input>
+                                    <input required type="number" onChange={(e) => setfetusWeight(e.target.value)} placeholder="in grams" id="fetusWeight" name="fetusWeight" className='border-b bg-transparent border-black w-32 text-center'></input>
                                 </label>
                             </div>
                         </div>
                         <div className='flex justify-center pt-2'>
-                            <button type='button' onClick={(event) => {handleFetalForm(event)}} className='bg-gray-700 p-2 rounded-xl text-white'>Submit</button>
+                            <button type='submit' onClick={(event) => {handleFetalForm(event)}} className='bg-gray-700 p-2 rounded-xl text-white'>Submit</button>
+                        </div>
+                        <div className='flex poppins'>
+                            {(fetalResult <=40) ? "Low chances of stillBirth" : (fetalResult<=70 && fetalResult > 40) ? "StillBirth can occur" : (fetalResult > 70) ? "Risk is high consult nearby hospital" : "" }
                         </div>
                     </div>
                 </div>
+                </form>
             }
 
-            </form>
+           </div> 
         </div>
     );
 }
