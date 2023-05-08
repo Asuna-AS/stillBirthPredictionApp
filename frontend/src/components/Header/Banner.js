@@ -20,11 +20,7 @@ const Banner = () => {
             },
             {
                 title: "How the prediction is done?",
-                content: "Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc"
-            },
-            {
-                title: "What are the factors contributing for prediction?",
-                content: "v1.0.5"
+                content: "Our Stillbirth risk calculator predicts the outcome using machine learning models which are developed by us. Mainly there are 3 models currently developed based on the 3 major contributing features in stillbirth (fetal, maternal and placental)."
             }]
     }
 
@@ -33,7 +29,6 @@ const Banner = () => {
             <div className="flex flex-col lg:flex-row px-6 items-center justify-around gap-10 pt-8">
                 <Zoom left>
                     <div className="flex w-3/5 flex-col justify-center m-auto h-full space-y-6">
-
                         <div className="flex w-11/12 flex-col">
                             {/* <img className="w-24" src="../../../assets/banner/medal.png" alt="banner" /> */}
                             <h1 className="poppins text-white font-semibold text-lg lg:text-5xl"><p className='leading-tight'>Life's biggest miracle is the gift of life growing inside you.</p></h1>

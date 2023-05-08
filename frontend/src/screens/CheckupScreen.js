@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
 import Zoom from 'react-reveal/Zoom';
-import ContactForm from '../components/Contact/ContactForm';
-import TextField from '../components/Form/TextField';
-import sick from "../sick.png"
-import Heading from '../components/Heading';
-import { set } from 'mongoose';
-import { RiNumber1 } from 'react-icons/ri';
-import Tabs from './../components/TabComponent/Tab'
-
-let CheckupScreen = () => {
-    // function formSubmit() {
-    //     if ((age > 0) && placentalAbs && prevSb && depression && obesity && drugIntake && chrAbr && diabetes && kidney && thyroid && married && blackrace && financial && sleep)
-    //         console.warn({ age, placentalAbs, prevSb, depression, obesity, drugIntake, chrAbr, diabetes, kidney, thyroid, married, blackrace, financial, sleep })
-    // }
-
+import NormalFeatures from '../components/TabComponent/NormalFeatures'
+import AdvancedFeatures from '../components/TabComponent/AdvancedFeatures'
+import Doctor from './doctor.png' 
+import Patient from './patient.png'
+import {AiOutlineArrowLeft} from 'react-icons/ai' 
+import { useHistory } from 'react-router-dom';
+let CheckupScreen = () => { 
+    let history = useHistory();
     return (
-        <section className="max-w-screen-xl pt-36 mx-auto overflow-y-hidden">
+        <section className="max-w-screen-xl pt-32 mx-auto overflow-y-hidden">
             {/* heading  */}
             <div className="flex flex-col">
                 <Zoom>
@@ -29,9 +23,17 @@ let CheckupScreen = () => {
                         <div className='items-center flex justify-center'><h1 className='text-center text-xl w-max text-white pb-8 poppins pt-3'>Calculate the Risk of having stillbirth</h1>
                         </div>
                     </Zoom>
-                    {/* <div className='poppins text-2xl pt-14 content-center'><h1 className='pb-10 Yesl-28'>Unwell?</h1><img  name="maternal" value=""className='w-3/5' src={sick}></img></div> */}
                     <Zoom left>
-                            <Tabs />
+                            <div className='items-center flex justify-evenly mx-0 text-white'>
+                                <div className='bg-transparent flex flex-col justify-center'>
+                                    <img width={300} src={Doctor}></img>
+                                    <button className='border p-4 hover:text-black hover:bg-gray-100' type="button" onClick={() => history.push('/doctorForm')}>Are You a doctor?</button>
+                                </div>
+                                <div className='bg-transparent flex flex-col justify-center'> 
+                                    <img width={300} src={Patient}></img>
+                                    <button className='bg-white text-black border p-4 hover:text-white hover:bg-transparent' type="button" onClick={() => history.push('/patientForm')}>Are You a Patient?</button>
+                                </div>  
+                            </div>
                     </Zoom>
 
                 </div>

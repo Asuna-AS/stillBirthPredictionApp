@@ -17,6 +17,8 @@ import SignInScreen from './screens/SignInScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import HospitalScreen from './screens/HospitalScreen';
 import CheckupScreen from './screens/CheckupScreen';
+import AdvancedFeatures from './components/TabComponent/AdvancedFeatures';
+import NormalFeatures from './components/TabComponent/NormalFeatures';
 import Particle from './Particle.jsx';
 import background from "./background.png"
 import './styles/app.css'
@@ -35,11 +37,10 @@ const App = () => {
             <Route exact path='/checkup'><CheckupScreen /></Route>
             <PublicRoute path="/signup"><SignUpScreen /></PublicRoute>
             <PublicRoute path="/signin"><SignInScreen /></PublicRoute>
-            <PrivateRoute exact path="/services/:title"><ServicesDetailScreen /></PrivateRoute>
             <Route exact path="/blogs/"><ProductsScreen /></Route>
+            <Route exact path="/doctorForm/"><AdvancedFeatures /></Route>
+            <Route exact path="/patientForm/"><NormalFeatures /></Route>
             <Route exact path="/hospitals/"><HospitalScreen /></Route>
-            <PrivateRoute exact path="/products/:title"><ProductDetailScreen /></PrivateRoute>
-            <PrivateRoute exact path="/orders"><OrderScreen /></PrivateRoute>
             <Route path="*"><ErrorScreen /></Route>
           </Switch>
           <Footer />
