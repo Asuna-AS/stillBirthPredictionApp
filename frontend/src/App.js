@@ -34,7 +34,9 @@ const App = () => {
           <Switch>
             <Route exact path="/"><HomeScreen /></Route>
             <Route exact path="/contact"><ContactScreen /></Route>
-            <Route exact path='/checkup'><CheckupScreen /></Route>
+            <Route exact path='/checkup'>
+              <CheckupScreen />
+              </Route>
             <PublicRoute path="/signup"><SignUpScreen /></PublicRoute>
             <PublicRoute path="/signin"><SignInScreen /></PublicRoute>
             <Route exact path="/blogs/"><ProductsScreen /></Route>

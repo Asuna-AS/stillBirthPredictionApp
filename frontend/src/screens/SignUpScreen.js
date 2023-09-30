@@ -40,14 +40,14 @@ const SignUpScreen = () => {
     }
 
     return (
-        <main className="pl-60 m-auto pt-24 pl-20 z-50">
-            <div className="grid grid-cols-1 md:grid-cols-2">
+        <main className="flex md:flex-row flex-col-reverse justify-around pt-32">
+            
                 {/* form  */}
                 <Bounce left>
-                    <div className="flex flex-col justify-center items-center pb-16">
+                    <div className="flex md:flex-row flex-col justify-center items-center pt-10">
                         {/* logo  */}
                         {/* sign up form  */}
-                        <form className="bg-white w-96 mt-6 p-4 rounded-lg shadow-lg" onSubmit={handleSubmit}>
+                        <form className="bg-white mt-6 p-6 rounded-lg md:w-96 w-72 shadow-lg shadow-cyan-500/50" onSubmit={handleSubmit}>
                         <div className='text-center pb-5'><h1 className="text-2xl font-semibold text-black brand-font select-none">Sign Up</h1></div>
                             <div className="flex flex-col space-y-6">
                                 {Inputs.map(input => (
@@ -71,11 +71,11 @@ const SignUpScreen = () => {
                 </Bounce>
                 {/* imagee  */}
                 <Bounce right>
-                    <div className="hidden md:flex lg:flex flex-col justify-center items-center w-full h-screen">
-                        <img className="pr-32" src={su} alt="signup" />
+                    <div className="flex items-center justify-center">
+                        <img className="md:w-96 w-64 pt-8" src={su} alt="signup" />
                     </div>
                 </Bounce>
-            </div>
+            
         </main>
     )
 }

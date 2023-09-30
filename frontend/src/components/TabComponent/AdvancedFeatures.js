@@ -105,7 +105,7 @@ function AdvancedFeatures() {
 
     return (
         <section className="max-w-screen-xl pt-32 mx-auto overflow-y-hidden">
-            <div className="flex flex-row-reverse justify-evenly space-x-4 pb-4 px-12">
+            <div className="flex justify-evenly space-x-4 pb-4 px-12 md:flex-row-reverse flex-col">
                 <Toaster
                     position="bottom-center"
                     reverseOrder={false}
@@ -120,11 +120,11 @@ function AdvancedFeatures() {
                     {
                         !res ?
                             <form className=" flex flex-col gap-2">
-                                <div className="flex flex-row justify-evenly">
+                                <div className="flex flex-col justify-evenly md:flex-row md:gap-0 gap-2">
                                     <div className="flex flex-col gap-2 border p-2">
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Placental Abruption</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="radio" name="placentalAbruption" onClick={(e) => { setPlacentalAbruption(e.target.value) }} value="1" />
                                                     Yes
@@ -136,9 +136,9 @@ function AdvancedFeatures() {
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Neurological Disease</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="radio" name="neurologicalDisease" onClick={(e) => { setNeurologicalDisease(e.target.value) }} value="1" />
                                                     Yes
@@ -150,9 +150,9 @@ function AdvancedFeatures() {
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Endocrinal Issues</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="radio" name="endocrinalIssues" onClick={(e) => { setEndocrinalIssues(e.target.value) }} value="1" />
                                                     Yes
@@ -164,9 +164,9 @@ function AdvancedFeatures() {
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>High BP</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="radio" name="highBP" onClick={(e) => { setHighBP(e.target.value) }} value="1" />
                                                     Yes
@@ -178,9 +178,9 @@ function AdvancedFeatures() {
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Congenital Rebulla</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="radio" name="congenitalRebulla" onClick={(e) => { setCongenitalRebulla(e.target.value) }} value="1" />
                                                     Yes
@@ -192,9 +192,9 @@ function AdvancedFeatures() {
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Cord Prolapse</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="radio" name="cordProlapse" onClick={(e) => { setCordProlapse(e.target.value) }} value="1" />
                                                     Yes
@@ -206,9 +206,9 @@ function AdvancedFeatures() {
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Infection</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="radio" name="infection" onClick={(e) => { setInfection(e.target.value) }} value="1" />
                                                     Yes
@@ -220,9 +220,9 @@ function AdvancedFeatures() {
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Blood Clotting Disorder</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="radio" name="bloodClottingDisorder" onClick={(e) => { setBloodClottingDisorder(e.target.value) }} value="1" />
                                                     Yes
@@ -233,9 +233,9 @@ function AdvancedFeatures() {
                                                 </label>
                                             </div>
                                         </div>
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Oligohydramnios</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="radio" name="oligohydramnios" onClick={(e) => { setOligohydramnios(e.target.value) }} value="1" />
                                                     Yes
@@ -248,9 +248,9 @@ function AdvancedFeatures() {
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-2 border p-2">
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Umbilical Cord Infection</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="radio" name="umbilicalCordInfection" onClick={(e) => { setUmbilicalCordInfection(e.target.value) }} value="1" />
                                                     Yes
@@ -262,9 +262,9 @@ function AdvancedFeatures() {
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Group B Infection</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="radio" name="groupBInfection" onClick={(e) => { setGroupBInfection(e.target.value) }} value="1" />
                                                     Yes
@@ -276,54 +276,54 @@ function AdvancedFeatures() {
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Multiple Gestations</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="number" placeholder="2 or 3" className="border w-24 hover:text-black px-2" name="multipleGestations" onChange={(e) => { setMultipleGestations(e.target.value) }} />
                                                 </label>
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Fetal Movement</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="number" className="border w-24 hover:text-black px-2" name="fetalMovement" onChange={(e) => { setFetalMovement(e.target.value) }} />
                                                 </label>
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Fetal Heartbeat</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="number" placeholder="in bpm" className="border w-24 hover:text-black px-2" name="fetalHeartbeat" onChange={(e) => { setFetalHeartbeat(e.target.value) }} />
                                                 </label>
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Gestation Age</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="number" placeholder="age" className="border w-24 hover:text-black px-2" name="gestationAge" onChange={(e) => { setGestationAge(e.target.value) }} />
                                                 </label>
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Placental Weight</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="number" placeholder="in grams" className="border w-24 hover:text-black px-2" name="placentalWeight" onChange={(e) => { setPlacentalWeight(e.target.value) }} />
                                                 </label>
                                             </div>
                                         </div>
                                         
-                                        <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                                        <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                                             <p>Fetus Weight</p>
-                                            <div className="flex flex-row gap-4">
+                                            <div className="flex gap-4 md:flex-row flex-col">
                                                 <label className="flex flex-row gap-2">
                                                     <input type="number" placeholder="in kg" className="border w-24 hover:text-black px-2" name="fetusWeight" onChange={(e) => { setFetusWeight(e.target.value) }} />
                                                 </label>

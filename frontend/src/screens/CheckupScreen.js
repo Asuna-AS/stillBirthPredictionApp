@@ -20,18 +20,18 @@ let CheckupScreen = () => {
                 </Zoom>
                 <div className='flex flex-col flex-wrap w-4/5 mx-auto'>
                     <Zoom>
-                        <div className='items-center flex justify-center'><h1 className='text-center text-xl w-max text-white pb-8 poppins pt-3'>Calculate the Risk of having stillbirth</h1>
+                        <div className='items-center flex justify-center'><h1 className='text-center text-xl text-white pb-8 poppins pt-3'>Calculate the Risk of having stillbirth</h1>
                         </div>
                     </Zoom>
                     <Zoom left>
-                            <div className='items-center flex justify-evenly mx-0 text-white'>
+                            <div className='items-center flex justify-around mx-0 text-white sm:flex-row flex-col gap-8 sm:gap-0'>
                                 <div className='bg-transparent flex flex-col justify-center'>
-                                    <img width={300} src={Doctor}></img>
-                                    <button className='border p-4 hover:text-black hover:bg-gray-100' type="button" onClick={() => history.push('/doctorForm')}>Are You a doctor?</button>
+                                    
+                                    <button className='border mx-auto p-4 w-1/2 hover:text-black hover:bg-gray-100' type="button" onClick={() => history.push('/doctorForm')}><img  src={Doctor}></img>Are You a doctor?</button>
                                 </div>
                                 <div className='bg-transparent flex flex-col justify-center'> 
-                                    <img width={300} src={Patient}></img>
-                                    <button className='bg-white text-black border p-4 hover:text-white hover:bg-transparent' type="button" onClick={() => history.push('/patientForm')}>Are You a Patient?</button>
+                                    
+                                    <button className='bg-white mx-auto w-1/2 text-black border p-4 hover:text-white hover:bg-transparent' type="button" onClick={() => history.push('/patientForm')}><img src={Patient}></img>Are You a Patient?</button>
                                 </div>  
                             </div>
                     </Zoom>

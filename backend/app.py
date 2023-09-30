@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app, support_credentials=True)
 normalFeatures = pickle.load(open('rf_model.pkl','rb'))
 advancedFeatures = pickle.load(open('lr_model.pkl','rb'))
-# print(model.predict([[]]))
+
 @app.route('/normalFeatures',methods=['POST'])
 @cross_origin(supports_credentials=True)
 def predict():
@@ -39,7 +39,7 @@ def predict2():
     print("----------------------------")
     ans = round(riski[1]*100, 2)
     print(ans)
-    r = {"result" : float(ans) }
+    r = {"result" : float(ans)}
     response = jsonify(r)
     return response
 

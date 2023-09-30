@@ -25,33 +25,33 @@ const Banner = () => {
     }
 
     return (
-        <section className="max-w-screen-xl mx-auto px-24 pt-12">
-            <div className="flex flex-col lg:flex-row px-6 items-center justify-around gap-10 pt-8">
+        <section className="max-w-screen-xl mx-auto pt-16">
+            <div className="flex flex-col md:flex-row px-6 items-center justify-around gap-10 pt-8">
                 <Zoom left>
-                    <div className="flex w-3/5 flex-col justify-center m-auto h-full space-y-6">
-                        <div className="flex w-11/12 flex-col">
+                    <div className="flex w-4/5 flex-col justify-center m-auto h-full space-y-6">
+                        <div className="flex flex-col">
                             {/* <img className="w-24" src="../../../assets/banner/medal.png" alt="banner" /> */}
-                            <h1 className="poppins text-white font-semibold text-lg lg:text-5xl"><p className='leading-tight'>Life's biggest miracle is the gift of life growing inside you.</p></h1>
+                            <h1 className="poppins text-white font-semibold text-3xl lg:text-5xl"><p className='leading-tight'>Life's biggest miracle is the gift of life growing inside you.</p></h1>
                             <p className="text-white text-light text-xl pt-4"></p>
                         <div className='flex text-white text-center font-semibold text-xl'>Calculate the risk of stillbirth.</div>
                         </div>
-                        <div className="bg-white w-8 h-1 rounded-full"></div>
+                        <div className="bg-white md:w-8 w-full h-1 rounded-full"></div>
                         {/* button  */}
-                        <div className="flex flex-row flex-wrap gap-5">
-                            <button className="bg-blue-900 text-white rounded-lg hover:bg-white py-3 px-4 hover:text-black poppins w-48 mt-6" onClick={() => history.push('/checkup')}>Get Started <span className='text-lg' aria-hidden="true">&rarr;</span></button>
-                            <button className="rounded-lg bg-transparent border-2 border-white py-3 px-4 text-white poppins w-48 mt-6 hover:bg-white hover:text-black shadow-lg" text="Reach us" onClick={() => history.push('/contact')}>Reach Us</button>
+                        <div className="flex flex-col md:flex-row justify-start gap-2">
+                            <button className="bg-blue-900 text-white rounded-lg hover:bg-white py-3 px-4 hover:text-black poppins w-48" onClick={() => history.push('/checkup')}>Get Started <span className='text-lg' aria-hidden="true">&rarr;</span></button>
+                            <button className="rounded-lg bg-transparent border-2 border-white py-3 px-4 text-white poppins w-48 hover:bg-white hover:text-black shadow-lg" text="Reach us" onClick={() => history.push('/contact')}>Reach Us</button>
                         </div>
                         
                     </div>
                 </Zoom>
 
                 <Zoom right>
-                    <div className="w-2/5">
+                    <div className="w-1/2">
                         <img src={hp2} width={462.33} alt="banner" />
                     </div>
                 </Zoom>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col px-12 items-center justify-cente">
                 <Zoom left>
                     {/* <div className="flex flex-row justify-evenly h-full">
                         <div className="flex flex-col w-2/5 p-4 gap-5">
@@ -70,7 +70,7 @@ const Banner = () => {
 
                 <Zoom right>
                     
-                        <div>
+                        <div className=''>
                             <Faq data={data} styles={{
                                 bgColor: "transparent",
                                 titleTextColor: "white",

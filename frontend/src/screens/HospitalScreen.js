@@ -5,13 +5,13 @@ import 'react-vertical-timeline-component/style.min.css';
 import Heading from '../components/Heading';
 const HospitalScreen = () => {
     return (
-        <section className="flex flex-col pt-40 px-32 items-center justify-evenly gap-5 space-x-10">
+        <section className="flex flex-col pt-40 px-24 items-center justify-evenly gap-5">
             {/* heading  */}
             <div>
                 <Heading title="Hospitals" />
             </div>
             <Zoom right>
-                <div className="bg-white flex flex-col rounded-lg overflow-hidden shadow-green-500/50 md:shadow-xl md:shadow-green-500 z-10">
+                <div className="bg-white flex flex-col rounded-lg overflow-hidden shadow-green-500/50 md:shadow-xl md:shadow-green-500 z-10 px-2">
                     <VerticalTimeline lineColor='#36bdbd'>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"

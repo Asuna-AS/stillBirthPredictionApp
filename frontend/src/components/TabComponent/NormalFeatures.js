@@ -117,14 +117,14 @@ function NormalFeatures() {
     return (
         <section className="max-w-screen-xl pt-32 mx-auto overflow-y-hidden">
             
-        <div className="flex flex-row justify-evenly space-x-4 pb-4 px-12">
+        <div className="flex flex-col md:flex-row justify-evenly space-x-4 pb-4 px-12">
         <Toaster
         position="bottom-center"
         reverseOrder={false}
          />
          {
             !res?
-         <div className="flex items-center"><img src={normalImage} width={250}></img></div>:""
+         <div className="flex items-center justify-center"><img src={normalImage} width={250}></img></div>:""
          }
             
             <div className="bg-white mt-6 p-6 rounded-lg shadow-lg shadow-cyan-500/50">
@@ -133,11 +133,11 @@ function NormalFeatures() {
                 {
                     !res?
                 <form className=" flex flex-col gap-2 text-sm">
-                    <div className="flex flex-row justify-evenly gap-2">
+                    <div className="flex flex-col md:flex-row justify-evenly gap-2">
                     <div className="flex flex-col gap-2 border p-2">
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Previous Stillbirth</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="previousStillbirth" onClick={(e)=>{setPreviousStillbirth(e.target.value)}} value="1" />
                             Yes
@@ -149,9 +149,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Depression</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="depression" onClick={(e)=>{setDepression(e.target.value)}} value="1" />
                             Yes
@@ -163,9 +163,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Trauma</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" onClick={(e)=>{setTrauma(e.target.value)}} name="trauma" value="1" />
                             Yes
@@ -177,9 +177,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Previous Abortion</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="previousAbortion" onClick={(e)=>{setPreviousAbortion(e.target.value)}} value="1" />
                             Yes
@@ -191,9 +191,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Drug Intake</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="drugIntake" onClick={(e)=>{setDrugIntake(e.target.value)}} value="1" />
                             Yes
@@ -205,18 +205,18 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Patient Age</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input className="border w-20 hover:text-black px-2" type="number" name="patientAge" onChange={(e)=>{setPatientAge(e.target.value)}}/>
                             </label>
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Obesity</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="obesity" onClick={(e)=>{setObesity(e.target.value)}} value="1" />
                             Yes
@@ -228,9 +228,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Diabetes</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="diabetes" onClick={(e)=>{setDiabetes(e.target.value)}} value="1" />
                             Yes
@@ -242,9 +242,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Thyroid</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="thyroid" onClick={(e)=>{setThyroid(e.target.value)}} value="1" />
                             Yes
@@ -256,9 +256,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Hypertension</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="hypertension" onClick={(e)=>{setHypertension(e.target.value)}} value="1" />
                             Yes
@@ -271,9 +271,9 @@ function NormalFeatures() {
                     </div>
                     </div>
                     <div className="flex flex-col gap-2 border p-2">
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Kidney Disease</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="kidneyDisease" onClick={(e)=>{setKidneyDisease(e.target.value)}} value="1" />
                             Yes
@@ -285,9 +285,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Urine Bladder Problem</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="urineBladderProblem" onClick={(e)=>{setUrineBladderProblem(e.target.value)}} value="1" />
                             Yes
@@ -299,9 +299,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Respiratory Problem</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="respiratoryProblem" onClick={(e)=>{setRespiratoryProblem(e.target.value)}} value="1" />
                             Yes
@@ -313,9 +313,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Cardio Problem</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="cardioProblem" onClick={(e)=>{setCardioProblem(e.target.value)}} value="1" />
                             Yes
@@ -327,9 +327,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Genetic Disorder</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="geneticDisorder" onClick={(e)=>{setGeneticDisorder(e.target.value)}} value="1" />
                             Yes
@@ -341,9 +341,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Anemia</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="anemia" onClick={(e)=>{setAnemia(e.target.value)}} value="1" />
                             Yes
@@ -355,9 +355,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Water Break</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="waterBreak" onClick={(e)=>{setWaterBreak(e.target.value)}} value="1" />
                             Yes
@@ -369,9 +369,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Frequent Dizziness</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="frequentDizziness" onClick={(e)=>{setFrequentDizziness(e.target.value)}} value="1" />
                             Yes
@@ -383,9 +383,9 @@ function NormalFeatures() {
                         </div>
                     </div>
                     
-                    <div className="flex flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-4 w-full justify-between px-8 hover:shadow-xl  hover:bg-gray-700 hover:text-white transition-all duration-150 rounded-xl p-1">
                         <p>Family History</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-col md:flex-row gap-4">
                             <label className="flex flex-row gap-2">
                             <input type="radio" name="familyHistory" onClick={(e)=>{setFamilyHistory(e.target.value)}} value="1" />
                             Yes
