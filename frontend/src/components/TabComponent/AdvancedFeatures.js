@@ -89,7 +89,7 @@ function AdvancedFeatures() {
             };
             console.log(formData);
             axios
-                .post("http://localhost:5000/advancedFeatures", formData)
+                .post("http://asunagg.pythonanywhere.com/advancedFeatures", formData)
                 .then((response) => {
                     console.log(response.data.result);
                     setRes(response.data.result);

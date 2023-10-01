@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/StillBirthPrediction/static/css/main.6aa3d5df.chunk.css",
+    "main.js": "/StillBirthPrediction/static/js/main.c79ea17e.chunk.js",
+    "main.js.map": "/StillBirthPrediction/static/js/main.c79ea17e.chunk.js.map",
+    "runtime-main.js": "/StillBirthPrediction/static/js/runtime-main.4c542ba0.js",
+    "runtime-main.js.map": "/StillBirthPrediction/static/js/runtime-main.4c542ba0.js.map",
+    "static/css/2.3ecd2353.chunk.css": "/StillBirthPrediction/static/css/2.3ecd2353.chunk.css",
+    "static/js/2.ef72e96a.chunk.js": "/StillBirthPrediction/static/js/2.ef72e96a.chunk.js",
+    "static/js/2.ef72e96a.chunk.js.map": "/StillBirthPrediction/static/js/2.ef72e96a.chunk.js.map",
+    "index.html": "/StillBirthPrediction/index.html",
+    "static/css/2.3ecd2353.chunk.css.map": "/StillBirthPrediction/static/css/2.3ecd2353.chunk.css.map",
+    "static/css/main.6aa3d5df.chunk.css.map": "/StillBirthPrediction/static/css/main.6aa3d5df.chunk.css.map",
+    "static/js/2.ef72e96a.chunk.js.LICENSE.txt": "/StillBirthPrediction/static/js/2.ef72e96a.chunk.js.LICENSE.txt",
+    "static/media/1.1a82dc10.png": "/StillBirthPrediction/static/media/1.1a82dc10.png",
+    "static/media/advanced.604273ce.png": "/StillBirthPrediction/static/media/advanced.604273ce.png",
+    "static/media/background.e351f535.png": "/StillBirthPrediction/static/media/background.e351f535.png",
+    "static/media/contact.6556c938.png": "/StillBirthPrediction/static/media/contact.6556c938.png",
+    "static/media/doctor.0484ebdc.png": "/StillBirthPrediction/static/media/doctor.0484ebdc.png",
+    "static/media/doctor.a32e6703.png": "/StillBirthPrediction/static/media/doctor.a32e6703.png",
+    "static/media/fit.e309da88.png": "/StillBirthPrediction/static/media/fit.e309da88.png",
+    "static/media/logOut.ead88920.png": "/StillBirthPrediction/static/media/logOut.ead88920.png",
+    "static/media/logo.01e93419.png": "/StillBirthPrediction/static/media/logo.01e93419.png",
+    "static/media/normal.926000f6.png": "/StillBirthPrediction/static/media/normal.926000f6.png",
+    "static/media/patient.1f5abfe4.png": "/StillBirthPrediction/static/media/patient.1f5abfe4.png",
+    "static/media/side.6d124463.png": "/StillBirthPrediction/static/media/side.6d124463.png",
+    "static/media/signup.a451835a.png": "/StillBirthPrediction/static/media/signup.a451835a.png",
+    "static/media/userIcon.48d52cdc.png": "/StillBirthPrediction/static/media/userIcon.48d52cdc.png",
+    "static/media/yoga-brain.6390ef1a.png": "/StillBirthPrediction/static/media/yoga-brain.6390ef1a.png",
+    "static/media/yoga-heart.f6e4917c.png": "/StillBirthPrediction/static/media/yoga-heart.f6e4917c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c542ba0.js",
+    "static/css/2.3ecd2353.chunk.css",
+    "static/js/2.ef72e96a.chunk.js",
+    "static/css/main.6aa3d5df.chunk.css",
+    "static/js/main.c79ea17e.chunk.js"
+  ]
+}
