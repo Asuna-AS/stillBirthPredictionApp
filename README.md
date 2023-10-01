@@ -1,5 +1,24 @@
 # Risk Analysis and Calculator for StillBirth, [Website](https://stillbirth-detection.netlify.app/#/)
 
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Objectives](#objectives)
+- [Research Questions](#research-questions)
+- [Study Methodology](#study-methodology)
+  - [Dataset Building](#dataset-building)
+  - [Data Analysis](#data-analysis)
+  - [Data Training](#data-training)
+  - [Risk Calculator](#risk-calculator)
+- [Workflow](#workflow)
+- [Machine Learning Model Workflow](#machine-learning-model-workflow)
+- [Results and Discussion](#results-and-discussion)
+- [Conclusions](#conclusions)
+  - [What Does This Study Add?](#what-does-this-study-add)
+- [Future Research Scope](#future-research-scope)
+- [References](#references)
+
+
 ## Introduction
 
 A stillbirth is the tragic loss of a baby before or during delivery, typically defined as occurring at or after the 20th week of pregnancy. In contrast, a miscarriage is the loss of a baby before reaching 20 weeks of pregnancy. The causes of stillbirth are multifaceted and involve maternal, placental, and fetal factors.
