@@ -1,5 +1,7 @@
 #Risk Analysis and Calculator for StillBirth
-Introduction
+
+##Introduction
+
 A stillbirth is the tragic loss of a baby before or during delivery, typically defined as occurring at or after the 20th week of pregnancy. In contrast, a miscarriage is the loss of a baby before reaching 20 weeks of pregnancy. The causes of stillbirth are multifaceted and involve maternal, placental, and fetal factors.
 
 Maternal Factors: Various maternal factors such as medical conditions, infections, substance abuse, and age can compromise maternal-fetal blood flow or placental function, potentially leading to stillbirth.
