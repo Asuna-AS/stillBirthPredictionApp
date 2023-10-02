@@ -42,8 +42,15 @@
 ### Built With
 
 Frontend:
-* [![React][React.js]][React-url]
+* ReactJS
+* Tailwindcss
+* particle.js
+* react-reveal
+* firebase
 
+Backend (API):
+* Flask
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
