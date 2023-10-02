@@ -1,4 +1,4 @@
-# Risk Analysis and Calculator for StillBirth, [Website](https://stillbirth-detection.netlify.app/#/)
+![ml (1)](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/24cee4fe-68fb-49f2-85cc-022eac483083)# Risk Analysis and Calculator for StillBirth, [Website](https://stillbirth-detection.netlify.app/#/)
 
 # Table of Contents
 
@@ -74,7 +74,7 @@ The project follows a specific workflow:
 
 Our ML workflow consists of data input, Explanable AI analysis, risk prediction, and data integration:
 
-![Figure 2: ML Workflow](https://drive.google.com/file/d/1dYr74uMH2uph7eH6PLbhOfrkyLo9pQVD/view?usp=drive_link)
+![Figure 2: ML Workflow]![ml (1)](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/e6c4ee31-3e94-4cf5-b1cd-0b2c200469e2)
 
 ## Results and Discussion
 
