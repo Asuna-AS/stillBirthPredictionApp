@@ -74,7 +74,7 @@ The project follows a specific workflow:
 
 Our ML workflow consists of data input, Explanable AI analysis, risk prediction, and data integration:
 
-![Figure 2: ML Workflow](https://drive.google.com/file/d/1dYr74uMH2uph7eH6PLbhOfrkyLo9pQVD/view?usp=sharing)
+![Figure 2: ML Workflow](https://drive.google.com/file/d/1dYr74uMH2uph7eH6PLbhOfrkyLo9pQVD/view?usp=drive_link)
 
 ## Results and Discussion
 
