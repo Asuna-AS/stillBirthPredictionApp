@@ -61,6 +61,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+<h3 align="center">Frontend</h3>
+
 * npm
   ```sh
   npm install npm@latest -g
@@ -83,7 +85,30 @@ Setup Application on local machine:
    npm start
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<h3 align="center">Backend</h3>
+
+* pip
+* Flask
+  ```sh
+  pip install Flask
+  ```
+
+### Installation
+
+Setup Application on local machine: 
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Asuna-AS/stillbirth-backend.git
+   ```
+2. Install required libraries from requirements.txt file
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. Start the server
+   ```sh
+   flask --app app.py run
+   ```
 
 ## Introduction
 
