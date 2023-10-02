@@ -75,7 +75,8 @@ The project follows a specific workflow:
 
 Our ML workflow consists of data input, Explanable AI analysis, risk prediction, and data integration:
 
-![ml (1)](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/e6c4ee31-3e94-4cf5-b1cd-0b2c200469e2)
+![Untitled design (17)](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/e93700dc-37bd-4855-97a4-21d589d10b27)
+
 
 ## Results and Discussion
 
