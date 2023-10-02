@@ -1,4 +1,4 @@
-<img justify="center" width="100px" src="https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/8022c3ae-47ff-4865-b173-8e1bf8d44c6c"></img><h1 align="center"> Risk Analysis and Calculator for StillBirth </h1> <br>
+<h1 align="center"><img justify="center" width="100px" src="https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/8022c3ae-47ff-4865-b173-8e1bf8d44c6c"></img> Risk Analysis and Calculator for StillBirth </h1> <br>
 
 [Website](https://stillbirth-detection.netlify.app/#/)
 
