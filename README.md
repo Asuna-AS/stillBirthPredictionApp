@@ -38,6 +38,8 @@
 ## About The Project
 
 ![homepage](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/c329c84e-0cb7-4fbf-bf5b-5dab53b34ca1)
+![checkup](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/86363aff-7ee4-4a83-b59b-204542e6628e)
+
 
 ### Built With
 
