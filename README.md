@@ -1,4 +1,6 @@
-# Risk Analysis and Calculator for StillBirth, [Website](https://stillbirth-detection.netlify.app/#/)
+<h1 align="center"> Risk Analysis and Calculator for StillBirth </h1> <br>
+
+[Website](https://stillbirth-detection.netlify.app/#/)
 
 # Table of Contents
 
