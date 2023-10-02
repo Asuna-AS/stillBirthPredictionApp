@@ -199,3 +199,11 @@ Future research possibilities include:
 1. National Library of Medicine, [Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4988848/)
 2. The American College of Obstetricians and Gynecologists, [Link](https://www.acog.org/clinical/clinical-guidance/obstetric-care-consensus/articles/2020/03/management-of-stillbirth)
 3. Risk For Stillbirth, [Link](https://fetalmedicine.org/research/assess/stillbirth)
+
+## Authors
+Arunim Singhal (Btech @ Indian Institute of Information Technology Lucknow)
+Priya Sharma (Btech @ Indian Institute of Information Technology Lucknow)
+
+
+## Mentor
+Dr. Mainak Adhikari (Head of Department - Computer Science) @ Indian Institute of Information Technology Lucknow.
