@@ -201,9 +201,9 @@ Future research possibilities include:
 3. Risk For Stillbirth, [Link](https://fetalmedicine.org/research/assess/stillbirth)
 
 ## Authors
-Arunim Singhal (Btech @ Indian Institute of Information Technology Lucknow)
-Priya Sharma (Btech @ Indian Institute of Information Technology Lucknow)
+- Arunim Singhal (Btech @ Indian Institute of Information Technology Lucknow)
+- Priya Sharma (Btech @ Indian Institute of Information Technology Lucknow)
 
 
 ## Mentor
-Dr. Mainak Adhikari (Head of Department - Computer Science) @ Indian Institute of Information Technology Lucknow.
+- Dr. Mainak Adhikari (Head of Department - Computer Science) @ Indian Institute of Information Technology Lucknow
