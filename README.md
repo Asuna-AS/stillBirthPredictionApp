@@ -68,15 +68,13 @@ Using the model with the highest accuracy, we calculated the risk percentage ass
 
 The project follows a specific workflow:
 
-![soft (1)](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/4daf256d-9b4d-468c-9688-64fa823400fc)
-
+![soft-workflow-stillbirth](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/4058d260-56b0-4427-8a01-0c0642f5452e)
 
 ## Machine Learning Model Workflow
 
 Our ML workflow consists of data input, Explanable AI analysis, risk prediction, and data integration:
 
-![Untitled design (17)](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/e93700dc-37bd-4855-97a4-21d589d10b27)
-
+![ml-workflow-stillbirth](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/2eab387e-5761-43eb-979d-3df90cd02764)
 
 ## Results and Discussion
 
