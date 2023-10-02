@@ -4,7 +4,7 @@
 <h1 align="center">Risk Analysis and Calculator for StillBirth</h1>
 
 
-<p><a href="https://stillbirth-detection.netlify.app/#/"></a></p>
+<p align="center"><a href="https://stillbirth-detection.netlify.app/#/"> Visit our deployed Application here!</a></p>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
