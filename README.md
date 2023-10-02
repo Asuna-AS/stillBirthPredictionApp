@@ -2,6 +2,7 @@
 
 # Table of Contents
 
+- [About The Project](#about-the-project)
 - [Introduction](#introduction)
 - [Objectives](#objectives)
 - [Research Questions](#research-questions)
