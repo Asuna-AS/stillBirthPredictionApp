@@ -6,7 +6,7 @@
 
 <p><a href="https://stillbirth-detection.netlify.app/#/"></a></p>
 
-# Table of Contents
+<h1 align="center">Table of Contents</h1>
 
 - [About The Project](#about-the-project)
 - [Introduction](#introduction)
