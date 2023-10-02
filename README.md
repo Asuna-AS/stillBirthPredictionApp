@@ -18,6 +18,10 @@
 - [Future Research Scope](#future-research-scope)
 - [References](#references)
 
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+![homepage](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/c329c84e-0cb7-4fbf-bf5b-5dab53b34ca1)
 
 ## Introduction
 
