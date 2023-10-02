@@ -9,6 +9,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#objectives">Objectives</a></li>
     <li><a href="#research-questions">Research Questions</a></li>
