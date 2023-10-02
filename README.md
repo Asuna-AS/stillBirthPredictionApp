@@ -5,25 +5,34 @@
 
 
 <p><a href="https://stillbirth-detection.netlify.app/#/"></a></p>
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#objectives">Objectives</a></li>
+    <li><a href="#research-questions">Research Questions</a></li>
+    <li><a href="#study-methodology">Study Methodology</a>
+      <ul>
+        <li><a href="#dataset-building">Dataset Building</a></li>
+        <li><a href="#data-analysis">Data Analysis</a></li>
+        <li><a href="#data-training">Data Training</a></li>
+        <li><a href="#risk-calculator">Risk Calculator</a></li>
+      </ul>
+    </li>
+    <li><a href="#workflow">Workflow</a></li>
+    <li><a href="#machine-learning-model-workflow">Machine Learning Model Workflow</a></li>
+    <li><a href="#results-and-discussion">Results and Discussion</a></li>
+    <li><a href="#conclusions">Conclusions</a>
+      <ul>
+        <li><a href="#what-does-this-study-add">What Does This Study Add?</a></li>
+      </ul>
+    </li>
+    <li><a href="#future-research-scope">Future Research Scope</a></li>
+    <li><a href="#references">References</a></li>
+  </ol>
+</details>
 
-<h1 align="center">Table of Contents</h1>
-
-- [About The Project](#about-the-project)
-- [Introduction](#introduction)
-- [Objectives](#objectives)
-- [Research Questions](#research-questions)
-- [Study Methodology](#study-methodology)
-  - [Dataset Building](#dataset-building)
-  - [Data Analysis](#data-analysis)
-  - [Data Training](#data-training)
-  - [Risk Calculator](#risk-calculator)
-- [Workflow](#workflow)
-- [Machine Learning Model Workflow](#machine-learning-model-workflow)
-- [Results and Discussion](#results-and-discussion)
-- [Conclusions](#conclusions)
-  - [What Does This Study Add?](#what-does-this-study-add)
-- [Future Research Scope](#future-research-scope)
-- [References](#references)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
