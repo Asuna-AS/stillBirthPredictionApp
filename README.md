@@ -24,6 +24,49 @@
 
 ![homepage](https://github.com/Asuna-AS/stillBirthPredictionApp/assets/75484060/c329c84e-0cb7-4fbf-bf5b-5dab53b34ca1)
 
+### Built With
+
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+* [![React][React.js]][React-url]
+* [![Tailwind][Tailwindcss]][TailwindCss-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+Setup Application on local machine: 
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Asuna-AS/stillBirthPredictionApp.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Start the project
+   ```sh
+   npm start
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Introduction
 
 A stillbirth is the tragic loss of a baby before or during delivery, typically defined as occurring at or after the 20th week of pregnancy. In contrast, a miscarriage is the loss of a baby before reaching 20 weeks of pregnancy. The causes of stillbirth are multifaceted and involve maternal, placental, and fetal factors.
